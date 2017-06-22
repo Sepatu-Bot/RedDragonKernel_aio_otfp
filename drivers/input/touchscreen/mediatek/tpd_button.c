@@ -11,7 +11,6 @@ static int tpd_keys[TPD_VIRTUAL_KEY_MAX] = { 0 };
 #ifdef CONFIG_LENOVO_GESTURE_WAKEUP
 extern int get_array_flag(void);
 #endif
-
 #endif
 static int tpd_keys_dim[TPD_VIRTUAL_KEY_MAX][4];	/* = {0}; */
 static ssize_t mtk_virtual_keys_show(struct kobject *kobj, struct kobj_attribute *attr, char *buf)
