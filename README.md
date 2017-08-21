@@ -1,4 +1,4 @@
-Daredevil Kernel for Lenovo A7000-a
+Venom kernel for Lenovo A7000-a
 ==============
 
 Basic   | Spec Sheet
@@ -18,10 +18,13 @@ This branch is for building VIBE MM/7.x based ROMs kernel.
         $ cd daredevil-kernel
 
         $ sh daredevil.sh
+        (for dt2w-enabled builds)
 
 ### Credits:
-  - rohantaneja (one reckless boi)
+  - tanish2k09 (me lol. Ma git Ma rulz)
+  - rohantaneja (one reckless boi (also did a tiny contribution to project. Only gave the whole base lmao)
   - xakep1993 (his N-port from Jiayu S3)
   - daniel_hk (his N-bringup for aio_otfp)
   - GSandeep96 (his pocket_mod and promixity fixes)
   - Compilers United (adeveloper79, aryankedare, tanish2k09, aswin)
+  - Varun Chitre (Varun.chitre15 @ xda-developers)
