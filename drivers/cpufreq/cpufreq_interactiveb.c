@@ -16,7 +16,7 @@
  *
  */
 
-#include <linux/cpu.h>
+/*#include <linux/cpu.h>
 #include <linux/cpumask.h>
 #include <linux/cpufreq.h>
 #include <linux/module.h>
@@ -32,16 +32,16 @@
 #include <linux/slab.h>
 #include <linux/kernel_stat.h>
 #include <asm/cputime.h>
-
+*/
 #define CREATE_TRACE_POINTS
 #include <trace/events/cpufreq_interactiveb.h>
 
 static int active_count;
 
-struct cpufreq_interactiveb_cpuinfo {
+/*struct cpufreq_interactiveb_cpuinfo {
 	struct timer_list cpu_timer;
 	struct timer_list cpu_slack_timer;
-	spinlock_t load_lock; /* protects the next 4 fields */
+	spinlock_t load_lock; // protects the next 4 fields
 	u64 time_in_idle;
 	u64 time_in_idle_timestamp;
 	u64 cputime_speedadj;
@@ -55,7 +55,7 @@ struct cpufreq_interactiveb_cpuinfo {
 	struct rw_semaphore enable_sem;
 	int governor_enabled;
 };
-
+*/
 static DEFINE_PER_CPU(struct cpufreq_interactiveb_cpuinfo, cpuinfo);
 
 /* realtime thread handles frequency scaling */
