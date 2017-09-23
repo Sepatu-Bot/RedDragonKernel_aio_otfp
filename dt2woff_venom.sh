@@ -4,7 +4,7 @@
 # Copyright © 2017, Rohan Taneja @ xda-developers
 #
 # This is a build script for building Daredevil Kernel builds
-# 
+#
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation; either version 2
@@ -45,12 +45,12 @@ export PATH=/mnt/dev/venom/aarch64-linux-android-4.9/bin:$PATH
 export KBUILD_BUILD_USER="tanish2k09"
 export KBUILD_BUILD_HOST="PYTHON"
 DEVICE="aio_row"
-CONFIG="daredevil_defconfig"
+CONFIG="venom_defconfig"
 
 #export CONFIG_DEBUG_SECTION_MISMATCH=y
 
 # Function declaration
-dd_clean() {
+venom_clean() {
                 cd $AK
                 rm -rf Image.gz-dtb
                 cd ..
@@ -58,7 +58,7 @@ dd_clean() {
                 rm -rf $OUTPUTDIR/*
                    }
 
-dd_compile() {
+venom_compile() {
                 echo "$red *******************************"
                 echo "$green*    Compilation in Progress    *"
                 echo "$blue *******************************$defcol"
@@ -76,14 +76,14 @@ dd_compile() {
                 cp -i $IMAGE $AK/Image.gz-dtb
                     }
 
-dd_zip() {
+venom_zip() {
                 cd $AK
                 BUILD_TIME=$(date +"%H%M")
-                zip -r Venom-$VAR-$BUILD_DATE-$BUILD_TIME-$DEVICE.zip *
+                zip -r Venom-dt2woff-$VAR-$BUILD_DATE-$BUILD_TIME-$DEVICE.zip *
                 if ! [ -d "$OUTPUTDIR" ]; then
                 mkdir $OUTPUTDIR
                 fi;
-                mv Venom-*.zip $OUTPUTDIR
+                mv Venom-dt2woff*.zip $OUTPUTDIR
                 cd $TREE
                 }
 
@@ -93,10 +93,10 @@ while true;
 
 clear
 
-echo "$red                Welcome$green to$blue Daredevil$yellow Build Script$defcol"
+echo "$red                Welcome$green to$blue Venom$yellow Build Script$defcol"
 echo "Make a choice to proceed further"
 echo "$red(1) Clean kernel source tree"
-echo "$green(2) Compile VENOM-S build"
+echo "$green(2) Compile VENOM-S-dt2woff build"
 echo "$blue(3) Generate Flashable Zip"
 echo "$yellow(4) Exit the script$defcol"
 
@@ -104,11 +104,11 @@ read -p "Enter your choice (1-4):" ch
 
 do
 case "$ch" in
-1) dd_clean
+1) venom_clean
 ;;
-2) dd_compile
+2) venom_compile
 ;;
-3) dd_zip
+3) venom_zip
 ;;
 4) exit 1
 ;;
