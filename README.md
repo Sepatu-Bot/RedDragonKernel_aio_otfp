@@ -11,7 +11,7 @@ Storage | 8GB
 Display | 5.5" IPS 1280 x 720 px
 Camera  | 8MPx, LED Flash
 
-This branch is for building VIBE MM/7.x based ROMs kernel.
+This branch is for building MM/7.x based ROMs kernel.
 
 ### Compilation
         
