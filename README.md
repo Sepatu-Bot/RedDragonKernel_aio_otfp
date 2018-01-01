@@ -1,4 +1,4 @@
-Venom kernel for Lenovo A7000-a
+RedDragon kernel for Lenovo K50a40
 ==============
 
 Basic   | Spec Sheet
@@ -8,20 +8,20 @@ GPU     | Mali-T760MP2
 Memory  | 2GB RAM
 Android Version | 6.0
 Storage | 8GB
-Display | 5.5" IPS 1280 x 720 px
-Camera  | 8MPx, LED Flash
+Display | 5.5" IPS 1080 x 1920 px
+Camera  | 13MPx, LED Flash, 5MPx
 
 This branch is for building VIBE MM/7.x based ROMs kernel.
 
 ### Compilation
         
-        $ cd daredevil-kernel
+        $ cd reddragon-kernel
 
-        $ sh daredevil.sh
+        $ sh reddragon.sh
         (for dt2w-enabled builds)
 
 ### Credits:
-  - tanish2k09 (me lol. Ma git Ma rulz)
+  - tanish2k09 (for Venom Kernel)
   - rohantaneja (one reckless boi (also did a tiny contribution to project. Only gave the whole base lmao)
   - xakep1993 (his N-port from Jiayu S3)
   - daniel_hk (his N-bringup for aio_otfp)
