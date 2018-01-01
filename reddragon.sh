@@ -41,16 +41,16 @@ export CROSS_COMPILE=aarch64-linux-android-
 JOBS=-j$(nproc)
 
 # Make changes as per the user
-export PATH=/mnt/dev/venom/aarch64-linux-android-4.9/bin:$PATH
-export KBUILD_BUILD_USER="tanish2k09"
-export KBUILD_BUILD_HOST="PYTHON"
-DEVICE="aio_row"
-CONFIG="venom_defconfig"
+export PATH=/mnt/dev/reddragon/aarch64-linux-android-4.9/bin:$PATH
+export KBUILD_BUILD_USER="jomypjose"
+export KBUILD_BUILD_HOST="RedDragon"
+DEVICE="aio_otfp"
+CONFIG="reddragon_defconfig"
 
 #export CONFIG_DEBUG_SECTION_MISMATCH=y
 
 # Function declaration
-venom_clean() {
+redragon_clean() {
                 cd $AK
                 rm -rf Image.gz-dtb
                 cd ..
@@ -58,7 +58,7 @@ venom_clean() {
                 rm -rf $OUTPUTDIR/*
                    }
 
-vemon_compile() {
+redragon_compile() {
                 echo "$red *******************************"
                 echo "$green*    Compilation in Progress    *"
                 echo "$blue *******************************$defcol"
@@ -76,14 +76,14 @@ vemon_compile() {
                 cp -i $IMAGE $AK/Image.gz-dtb
                     }
 
-venom_zip() {
+redragon_zip() {
                 cd $AK
                 BUILD_TIME=$(date +"%H%M")
                 zip -r Venom-$VAR-$BUILD_DATE-$BUILD_TIME-$DEVICE.zip *
                 if ! [ -d "$OUTPUTDIR" ]; then
                 mkdir $OUTPUTDIR
                 fi;
-                mv Venom-*.zip $OUTPUTDIR
+                mv RedDragon-*.zip $OUTPUTDIR
                 cd $TREE
                 }
 
@@ -93,10 +93,10 @@ while true;
 
 clear
 
-echo "$red                Welcome$green to$blue Venom$yellow Build Script$defcol"
+echo "$red                Welcome$green to$blue RedDragon$yellow Build Script$defcol"
 echo "Make a choice to proceed further"
 echo "$red(1) Clean kernel source tree"
-echo "$green(2) Compile VENOM-S build"
+echo "$green(2) Compile REDDRAGON-S build"
 echo "$blue(3) Generate Flashable Zip"
 echo "$yellow(4) Exit the script$defcol"
 
@@ -104,11 +104,11 @@ read -p "Enter your choice (1-4):" ch
 
 do
 case "$ch" in
-1) venom_clean
+1) reddragon_clean
 ;;
-2) venom_compile
+2) reddragon_compile
 ;;
-3) venom_zip
+3) reddragon_zip
 ;;
 4) exit 1
 ;;
