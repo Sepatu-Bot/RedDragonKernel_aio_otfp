@@ -7,7 +7,7 @@ CPU     | 1.5GHz 64-bit Octa-Core MT6752
 GPU     | Mali-T760MP2
 Memory  | 2GB RAM
 Android Version | 6.0
-Storage | 8GB
+Storage | 16GB
 Display | 5.5" IPS 1080 x 1920 px
 Camera  | 13MPx, LED Flash, 5MPx
 
